@@ -1,0 +1,205 @@
+/* ? Font family */
+@import url("https://fonts.googleapis.com/css2? family= Rəqs+Script və ailə= Encode+Sans+Condensed:wght@300 & family= Josefin+Sans:ital,wght@1300 & family= Oksigen:wght@300 & family= Rubik:ital,wght@1,300 & display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --todo--background--color: #171823;
+  --routine--boxs--text--color: #c8cbe7;
+  --boxs--background--color: #25273d;
+  --boxs--footer--text--color: #5b5e7e;
+  --boxs--footer--hover--color: #e3e4f1;
+  --boxs--border--color: #393a4b;
+}
+
+.todo__app {
+  width: 100%;
+  height: 100vh;
+  border: 2px solid black;
+  background-color: var(--todo--background--color);
+  background-image: url(../image/Bitmap.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  padding: 3% 0;
+  position: relative;
+}
+
+.todo__logo {
+  width: 540px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo__logo > p {
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 15px;
+}
+
+.daily__routine__boxs {
+  margin-top: 90px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.boxs__background {
+  width: 540px;
+  height: 64px;
+  border-radius: 5px;
+  background-color: var(--boxs--background--color);
+  padding-left: 24px;
+  border-bottom: 1px solid var(--boxs--border--color);
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.daily__routine__boxs__header {
+  margin-bottom: 20px;
+}
+
+.daily__routine__boxs__header > span {
+  color: var(--routine--boxs--text--color);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.25px;
+}
+
+input {
+  width: 24px;
+  height: 24px;
+}
+
+.delete__text {
+  color: #4d5067;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.25px;
+  text-decoration-line: strikethrough;
+}
+
+.daily__routine__text {
+  color: var(--routine--boxs--text--color);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.25px;
+}
+
+.daily__routine__boxs__footer {
+  width: 540px;
+  height: 64px;
+  border-radius: 5px;
+  background-color: var(--boxs--background--color);
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.daily__routine__boxs__footer p {
+  color: var(--boxs--footer--text--color);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.194px;
+  cursor: pointer;
+}
+
+.daily__routine__boxs__footer p:hover {
+  color: var(--boxs--footer--hover--color);
+}
+
+.daily__routine__boxs__footer ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: var(--boxs--footer--text--color);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.194px;
+}
+
+ul li a:hover {
+  color: var(--boxs--footer--hover--color);
+}
+
+.footer__link > a {
+  text-decoration: none;
+  color: var(--boxs--footer--text--color);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.194px;
+
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, 0);
+}
+
+/* ! Responsive */
+@media (max-width: 576px) {
+  .todo__app {
+    width: 576px;
+    height: 600px;
+    padding: 8% 0;
+  }
+
+  .todo__logo {
+    width: 450px;
+  }
+
+  .daily__routine__boxs {
+    margin-top: 70px;
+  }
+
+  .boxs__background {
+    width: 450px;
+    height: 48px;
+  }
+
+  .daily__routine__boxs__footer {
+    width: 450px;
+    height: 48px;
+    padding: 0 24px;
+  }
+
+  .daily__routine__boxs__footer p {
+    display: none;
+  }
+
+  .daily__routine__boxs__footer ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-left: 120px;
+  }
+}
